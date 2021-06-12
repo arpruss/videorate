@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "Video Rate",
+  "version": "0.0.1",
+  "description": "Set video rate.",
+  
+    "browser_action": {
+      "default_title": "Set video rate",
+      "default_popup": "popup.html"
+    },  
+
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+
+  "content_scripts": [{
+    "js": ["inject.js"],
+    "matches": ["<all_urls>"],
+    "all_frames": true
+  }],
+
+  "web_accessible_resources": [
+  ]  
+}
+
